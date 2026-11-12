@@ -1,0 +1,55 @@
+{
+  "name": "astromei-core",
+  "version": "0.1.0",
+  "description": "Offline Rokuyo (六曜) calculation core by Astromei: daily lookup, monthly calendars and date search.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "astromei",
+    "rokuyo",
+    "六曜",
+    "六曜カレンダー",
+    "大安",
+    "友引",
+    "japanese-calendar",
+    "kyureki"
+  ],
+  "homepage": "https://astromei.com/ja/rokuyo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astromei/astromei-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/astromei/astromei-core/issues"
+  },
+  "author": "Astromei (https://astromei.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "korean-lunar-calendar": "0.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
+  }
+}
